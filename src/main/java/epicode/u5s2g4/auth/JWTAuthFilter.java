@@ -43,7 +43,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 
 		// 3.0 Estraggo l'email dal token e cerco l'utente
 		String email = JWTTools.extractSubject(accessToken);
-		System.out.println("******************************** " + email);
+
 		try {
 			User user = usersService.findByEmail(email);
 
